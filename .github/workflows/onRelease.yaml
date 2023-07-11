@@ -44,9 +44,7 @@ jobs:
       PAT_GITHUB:               ${{ secrets.PAT_GITHUB }}
 
   pr_CI_UAT:
-
-    if:                         github.event_name == 'pull_request' && github.event.action == 'opened' && contains(github.base_ref, 'release')
-    name:                       Checks
+    name:                       Checks2
     runs-on:                    ubuntu-latest
     steps:
       - run: |
